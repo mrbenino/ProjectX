@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191926">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHeaderBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="315dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHeaderTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHeaderStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHeaderEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <ImageView
+        android:id="@+id/imageMove"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineHeaderBottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/orig" />
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="back"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="@id/guidelineHeaderTop"
+        app:layout_constraintStart_toStartOf="@id/guidelineHeaderStart"/>
+
+    <TextView
+        android:id="@+id/page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13+"
+        android:textColor="@color/white"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineHeaderBottom"
+        app:layout_constraintStart_toStartOf="@id/guidelineHeaderStart"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Avengers: End Game"
+        android:textColor="@color/white"
+        android:textSize="42dp"
+        app:layout_constraintBottom_toTopOf="@id/tegs"
+        app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineHeaderStart"
+        app:layout_constraintTop_toTopOf="@+id/guidelineHeaderBottom" />
+
+    <TextView
+        android:id="@+id/tegs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Action, Adventure, Fantasy"
+        android:textColor="#ff3566"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toTopOf=""
+        app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineHeaderStart"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:layout_constraintStart_toEndOf="@id/guidelineHeaderStart"
+        app:layout_constraintEnd_toStartOf="@id/star2"
+        app:srcCompat="@drawable/star_icon" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:srcCompat="@drawable/star_icon"
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:layout_constraintStart_toEndOf="@id/star1"
+        app:layout_constraintEnd_toStartOf="@id/star3"/>
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:srcCompat="@drawable/star_icon"
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:layout_constraintStart_toEndOf="@id/star2"
+        app:layout_constraintEnd_toStartOf="@id/star4" />
+
+    <ImageView
+        android:id="@+id/star4"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:srcCompat="@drawable/star_icon"
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:layout_constraintStart_toEndOf="@id/star3"
+        app:layout_constraintEnd_toStartOf="@id/star5" />
+
+    <ImageView
+        android:id="@+id/star5"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:layout_constraintStart_toEndOf="@id/star4"
+        app:layout_constraintEnd_toStartOf="@id/reviews"
+        app:srcCompat="@drawable/star_notactive"/>
+
+    <TextView
+        android:id="@+id/reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="125 REVIEWS"
+        android:textColor="#6d6e7f"
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:layout_constraintStart_toEndOf="@id/star5" />
+
+    <TextView
+        android:id="@+id/storiline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Storiline"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/star1"
+        app:layout_constraintStart_toEndOf="@id/guidelineHeaderStart"/>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="The film was announced in October 2014 as Avengers: Infinity War – Part 2, but Marvel later removed this title. The Russo brothers joined as directors in April 2015, with Markus and McFeely signing on to write the script a month later."
+        app:layout_constraintTop_toBottomOf="@id/storiline"
+        app:layout_constraintStart_toEndOf="@id/guidelineHeaderStart"
+        app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
