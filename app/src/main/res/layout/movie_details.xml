@@ -53,18 +53,18 @@
         android:layout_marginStart="16dp"
         android:text="back"
         android:textColor="@color/white"
-        app:layout_constraintTop_toTopOf="@id/guidelineHeaderTop"
-        app:layout_constraintStart_toStartOf="@id/guidelineHeaderStart"/>
+        app:layout_constraintStart_toStartOf="@id/guidelineHeaderStart"
+        app:layout_constraintTop_toTopOf="@id/guidelineHeaderTop" />
 
     <TextView
         android:id="@+id/page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
         android:text="13+"
         android:textColor="@color/white"
-        android:layout_marginBottom="45dp"
         app:layout_constraintBottom_toBottomOf="@id/guidelineHeaderBottom"
-        app:layout_constraintStart_toStartOf="@id/guidelineHeaderStart"/>
+        app:layout_constraintStart_toStartOf="@id/guidelineHeaderStart" />
 
     <TextView
         android:id="@+id/title"
@@ -85,7 +85,7 @@
         android:text="Action, Adventure, Fantasy"
         android:textColor="#ff3566"
         android:textSize="16dp"
-        app:layout_constraintBottom_toTopOf=""
+        app:layout_constraintBottom_toTopOf="@id/reviews"
         app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
         app:layout_constraintStart_toStartOf="@+id/guidelineHeaderStart"
         app:layout_constraintTop_toBottomOf="@+id/title" />
@@ -94,74 +94,237 @@
         android:id="@+id/star1"
         android:layout_width="18dp"
         android:layout_height="18dp"
-        app:layout_constraintTop_toBottomOf="@id/tegs"
-        app:layout_constraintStart_toEndOf="@id/guidelineHeaderStart"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@id/star2"
+        app:layout_constraintStart_toEndOf="@id/guidelineHeaderStart"
+        app:layout_constraintTop_toBottomOf="@id/tegs"
         app:srcCompat="@drawable/star_icon" />
 
     <ImageView
         android:id="@+id/star2"
         android:layout_width="18dp"
         android:layout_height="18dp"
-        app:srcCompat="@drawable/star_icon"
-        app:layout_constraintTop_toBottomOf="@id/tegs"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@id/star3"
         app:layout_constraintStart_toEndOf="@id/star1"
-        app:layout_constraintEnd_toStartOf="@id/star3"/>
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:srcCompat="@drawable/star_icon" />
 
     <ImageView
         android:id="@+id/star3"
         android:layout_width="18dp"
         android:layout_height="18dp"
-        app:srcCompat="@drawable/star_icon"
-        app:layout_constraintTop_toBottomOf="@id/tegs"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@id/star4"
         app:layout_constraintStart_toEndOf="@id/star2"
-        app:layout_constraintEnd_toStartOf="@id/star4" />
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:srcCompat="@drawable/star_icon" />
 
     <ImageView
         android:id="@+id/star4"
         android:layout_width="18dp"
         android:layout_height="18dp"
-        app:srcCompat="@drawable/star_icon"
-        app:layout_constraintTop_toBottomOf="@id/tegs"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@id/star5"
         app:layout_constraintStart_toEndOf="@id/star3"
-        app:layout_constraintEnd_toStartOf="@id/star5" />
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:srcCompat="@drawable/star_icon" />
 
     <ImageView
         android:id="@+id/star5"
         android:layout_width="18dp"
         android:layout_height="18dp"
-        app:layout_constraintTop_toBottomOf="@id/tegs"
-        app:layout_constraintStart_toEndOf="@id/star4"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toStartOf="@id/reviews"
-        app:srcCompat="@drawable/star_notactive"/>
+        app:layout_constraintStart_toEndOf="@id/star4"
+        app:layout_constraintTop_toBottomOf="@id/tegs"
+        app:srcCompat="@drawable/star_notactive" />
 
     <TextView
         android:id="@+id/reviews"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:text="125 REVIEWS"
         android:textColor="#6d6e7f"
-        app:layout_constraintTop_toBottomOf="@id/tegs"
-        app:layout_constraintStart_toEndOf="@id/star5" />
+        app:layout_constraintStart_toEndOf="@id/star5"
+        app:layout_constraintTop_toBottomOf="@id/tegs" />
 
     <TextView
         android:id="@+id/storiline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Storiline"
         android:textColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/star1"
-        app:layout_constraintStart_toEndOf="@id/guidelineHeaderStart"/>
+        app:layout_constraintStart_toEndOf="@id/guidelineHeaderStart"
+        app:layout_constraintTop_toBottomOf="@id/star1" />
 
     <TextView
         android:id="@+id/text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
         android:text="The film was announced in October 2014 as Avengers: Infinity War – Part 2, but Marvel later removed this title. The Russo brothers joined as directors in April 2015, with Markus and McFeely signing on to write the script a month later."
-        app:layout_constraintTop_toBottomOf="@id/storiline"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"
         app:layout_constraintStart_toEndOf="@id/guidelineHeaderStart"
-        app:layout_constraintEnd_toEndOf="@id/guidelineHeaderEnd"/>
+        app:layout_constraintTop_toBottomOf="@id/storiline" />
 
+    <TextView
+        android:id="@+id/cast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Cast"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toEndOf="@id/guidelineHeaderStart"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+    <ImageView
+        android:id="@+id/castImg1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintEnd_toStartOf="@id/castImg2"
+        app:layout_constraintStart_toStartOf="@id/guidelineHeaderStart"
+        app:layout_constraintTop_toBottomOf="@id/cast"
+        app:layout_constraintBottom_toTopOf="@+id/castName1"
+        android:foreground="@drawable/separator"
+        android:outlineProvider="background"
+        app:srcCompat="@drawable/tony" />
+
+    <TextView
+        android:id="@+id/castName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Robert"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@id/castFerstName1"
+        app:layout_constraintStart_toStartOf="@id/castImg1"
+        app:layout_constraintTop_toBottomOf="@id/castImg1" />
+
+    <TextView
+        android:id="@+id/castFerstName1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Downey Jr."
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/castImg1"
+        app:layout_constraintTop_toBottomOf="@id/castName1" />
+
+    <ImageView
+        android:id="@+id/castImg2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintStart_toEndOf="@id/castImg1"
+        app:layout_constraintTop_toBottomOf="@id/cast"
+        app:layout_constraintEnd_toStartOf="@id/castImg3"
+        app:layout_constraintBottom_toTopOf="@+id/castName2"
+        app:srcCompat="@drawable/america" />
+
+    <TextView
+        android:id="@+id/castName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Robert"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@id/castFerstName1"
+        app:layout_constraintStart_toStartOf="@id/castImg2"
+        app:layout_constraintTop_toBottomOf="@id/castImg2" />
+
+    <TextView
+        android:id="@+id/castFerstName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Downey Jr."
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/castImg2"
+        app:layout_constraintTop_toBottomOf="@id/castName2" />
+
+    <ImageView
+        android:id="@+id/castImg3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintStart_toEndOf="@id/castImg2"
+        app:layout_constraintTop_toBottomOf="@id/cast"
+        app:layout_constraintEnd_toStartOf="@id/castImg4"
+        app:layout_constraintBottom_toTopOf="@+id/castName3"
+        app:srcCompat="@drawable/halk" />
+
+    <TextView
+        android:id="@+id/castName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Robert"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@id/castFerstName2"
+        app:layout_constraintStart_toStartOf="@id/castImg3"
+        app:layout_constraintTop_toBottomOf="@id/castImg3" />
+
+    <TextView
+        android:id="@+id/castFerstName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Downey Jr."
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/castImg3"
+        app:layout_constraintTop_toBottomOf="@id/castName3" />
+
+    <ImageView
+        android:id="@+id/castImg4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="W,1:1"
+        app:layout_constraintStart_toEndOf="@id/castImg3"
+        app:layout_constraintTop_toBottomOf="@id/cast"
+        app:layout_constraintEnd_toStartOf="@id/guidelineHeaderEnd"
+        app:layout_constraintBottom_toTopOf="@+id/castName4"
+        app:srcCompat="@drawable/tor" />
+
+    <TextView
+        android:id="@+id/castName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Robert"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toTopOf="@id/castFerstName4"
+        app:layout_constraintStart_toStartOf="@id/castImg4"
+        app:layout_constraintTop_toBottomOf="@id/castImg4" />
+
+    <TextView
+        android:id="@+id/castFerstName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Downey Jr."
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="@id/castImg4"
+        app:layout_constraintTop_toBottomOf="@id/castName4" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
